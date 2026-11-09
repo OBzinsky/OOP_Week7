@@ -1,17 +1,48 @@
 package ie.atu;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+Scanner input = new Scanner(System.in);
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static class Member{
+        ArrayList<Member> members = new ArrayList<>();
+        members.add(new Member("1", "Dave"));
+        members.add(new Member("2", "Sarah"));
+        members.add(new Member("3", "Tom"));
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        for (Member member : members) {
+            System.out.println(member);
         }
+    private String memberid;
+    private String name;
+    private int age;
+
+    ArrayList <String> strings;
+
+
+
+    public Member (int age, String name,String memberid ) {
+        this.age = age;
+        this.name = name;
+        this.memberid = memberid;
     }
+
+
+    public String getMemberid() {return memberid;}
+    public String getName() {return name;}
+
+    public int getAge() {
+        return age;
+    }
+     displayDetails() {
+        return age;
+        return name;
+        return memberid;
+         System.out.println(name);
+    }
+    }
+
+
 }
